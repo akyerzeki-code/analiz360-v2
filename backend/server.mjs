@@ -144,16 +144,15 @@ app.get("/auth/facebook/callback", async (req, res) => {
 // ------------------------------
 // SERVER START
 // ------------------------------
-const PORT = 3001;
-app.listen(PORT, () => {
-  console.log(`🚀 Backend çalışıyor: http://localhost:${PORT}`);
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Backend çalışıyor: PORT ${PORT}`);
 
   console.log("GOOGLE REDIRECT:", process.env.GOOGLE_REDIRECT_URI);
 
   console.log("FACEBOOK LOGIN URL:");
   console.log(
-    `https://www.facebook.com/v19.0/dialog/oauth?client_id=${process.env.FACEBOOK_CLIENT_ID}&redirect_uri=${encodeURIComponent(
-      process.env.FACEBOOK_REDIRECT_URI
-    )}&response_type=code&scope=email,public_profile`
+    `https://www.facebook.com/v19.0/dialog/oauth?client_id=${process.env.FACEBOOK_CLIENT_ID}&redirect_uri=${process.env.FACEBOOK_REDIRECT_URI}&response_type=code&scope=email,public_profile`
   );
 });
