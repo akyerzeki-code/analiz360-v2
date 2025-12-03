@@ -1,0 +1,130 @@
+/* ARKA PLAN VİDEO */
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(0.45) blur(3px);
+}
+
+/* KARANLIK GRADIENT ÖRTÜSÜ */
+.login-container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.65));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* CAM GÖRÜNÜMLÜ GLASSMORPHISM KART */
+.glass-card {
+  width: 92%;
+  max-width: 420px;
+  padding: 32px;
+  border-radius: 22px;
+  backdrop-filter: blur(16px) saturate(180%);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+  animation: cardFade 0.8s ease-out forwards;
+}
+
+/* Kart açılış animasyonu */
+@keyframes cardFade {
+  0% { opacity: 0; transform: translateY(25px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Başlık */
+.logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.football-icon {
+  font-size: 38px;
+}
+
+.app-title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.subtitle {
+  color: #e3e3e3;
+  font-size: 16px;
+  text-align: center;
+  margin: 8px 0 25px 0;
+}
+
+/* INPUT GRUP */
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px 45px 15px 45px;
+  border-radius: 14px;
+  border: none;
+  font-size: 15px;
+  outline: none;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+.input-group input::placeholder {
+  color: #d5d5d5;
+}
+
+/* Input sol icon */
+.input-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* Şifre göster/gizle ikonu */
+.eye-icon {
+  position: absolute;
+  right: 14px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Giriş butonu */
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,123,255,0.35);
+  transition: 0.25s;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,123,255,0.5);
+}

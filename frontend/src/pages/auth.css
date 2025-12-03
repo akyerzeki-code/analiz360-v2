@@ -1,0 +1,83 @@
+.auth-container {
+  min-height: 100vh;
+  width: 100%;
+  background: url('/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.auth-card {
+  width: 90%;
+  max-width: 420px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  padding: 26px;
+  text-align: center;
+}
+
+.auth-title {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.auth-subtitle {
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 14px;
+  background: #007bff;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 18px;
+}
+
+.auth-bottom-text {
+  color: white;
+  font-size: 15px;
+}
+
+.auth-link {
+  color: #00aaff;
+  font-weight: 600;
+}
+
+/* Mobil card küçültme */
+@media (max-width: 480px) {
+  .auth-card {
+    max-width: 340px;
+    padding: 20px;
+  }
+}
+
+/* Masaüstü kart büyütme */
+@media (min-width: 1024px) {
+  .auth-card {
+    max-width: 520px;
+    padding: 32px;
+  }
+}
